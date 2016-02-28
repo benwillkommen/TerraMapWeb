@@ -35,7 +35,7 @@ def post_world(world):
     filename = "{0}_{1}_tiles_{2}_items_{3}.png".format(world, timestamp, tileIds, itemIds)
     input_file_path = path_to_file.format(user, world)
     output_file_path = path_to_file.format(user, filename)
-    terramap_output = check_output('terramapcmd -i \"{0}\" -o \"{1}\" -t \"{2}\" -m \"{3}\"'.format(input_file_path, output_file_path, tileIds, itemIds), shell=True)
+    terramap_output = check_output('terramapcmd -i \"{0}\" -o \"{1}\" -t \"{2}\" -m \"{3}\"'.format(input_file_path, output_file_path, tileIds, itemIds))
 
     viewmodel = {"terramap_lines": terramap_output.split("\r\n"), "filename": filename}
     return render_template("map_created.html", viewmodel=viewmodel)
