@@ -1,0 +1,13 @@
+<!doctype html>
+<head>
+</head>
+<body>
+	<h1>Maps</h1>	
+	<ul>	
+		{% for map in maps %}	
+		<li>
+			<a href='/maps/{{ map }}' >{{map}}</a>
+		</li>		
+		{% endfor %}
+	</ul>
+</body>

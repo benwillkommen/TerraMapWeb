@@ -1,0 +1,16 @@
+<!doctype html>
+<head>
+</head>
+<body>
+	<h1>Worlds</h1>
+	<h2>Lookup <a href='http://terraria.gamepedia.com/Item_IDs' target="_blank">item ids</a> and <a href='http://terraria.gamepedia.com/Tile_IDs' target="_blank">tile ids</a>. Enter them with a semi-colon delimeter.</h2>
+	{% for world in worlds %}	
+	<form method='post' action='/worlds/{{ world }}' >
+		<h3><a href="/worlds/{{world}}">{{ world }}</a></h3>
+		<p>tiles:<br/> <input type='text' name='tiles' placeholder='123;456'></p>
+		<p>items:<br/> <input type='text' name='items' placeholder='123;456'></p>
+		<p><input type='submit' value='generate map'></form></p>		
+	</form>
+	<br/>
+	{% endfor %}
+</body>

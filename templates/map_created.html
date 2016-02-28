@@ -1,0 +1,11 @@
+<!doctype html>
+<head>
+</head>
+<body>
+	<h1>Worlds</h1>
+	<h2>Map generated at <a href='/maps/{{viewmodel.filename}}'>{{viewmodel.filename}}</a></h2>
+	<p>terramapcmd.exe output:</p>
+	{% for terramap_line in viewmodel.terramap_lines %}	
+		{{terramap_line}}<br/>
+	{% endfor %}
+</body>
